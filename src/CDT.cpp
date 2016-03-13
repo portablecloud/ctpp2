@@ -659,6 +659,12 @@ CDT & CDT::operator[](const UINT_32  iPos)
 		u.p_data = new _CDT;
 		u.p_data -> u.v_data = new Vector(iPos + 1);
 	}
+	else if (eValueType == HASH_VAL)
+	{
+		CHAR_8 szBuf[C_MAX_SPRINTF_LENGTH + 1];
+		snprintf(szBuf, C_MAX_SPRINTF_LENGTH, "%d", iPos);
+		return this->operator[](szBuf);
+	}
 	else if (eValueType != ARRAY_VAL) { throw CDTAccessException(); }
 
 	// Unshare complex type
