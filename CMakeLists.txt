@@ -15,6 +15,7 @@ SET(CTPP_MASTER_SITE_URL "http://ctpp.havoc.ru/")
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6.0 FATAL_ERROR)
 SET(CMAKE_CXX_STANDARD 11)
+USE_CXX11()
 
 OPTION(DEBUG_MODE          "Enable debug output [default: OFF]"                 OFF)
 OPTION(ENABLE_OPTIMIZATION "Enable optimization [default: ON]"                  ON)
