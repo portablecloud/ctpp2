@@ -15,7 +15,6 @@ SET(CTPP_MASTER_SITE_URL "http://ctpp.havoc.ru/")
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6.0 FATAL_ERROR)
 SET(CMAKE_CXX_STANDARD 11)
-USE_CXX11()
 
 OPTION(DEBUG_MODE          "Enable debug output [default: OFF]"                 OFF)
 OPTION(ENABLE_OPTIMIZATION "Enable optimization [default: ON]"                  ON)
@@ -306,7 +305,7 @@ INCLUDE_DIRECTORIES(include/functions)
 
 IF("${CMAKE_COMPILER_IS_GNUCXX}" MATCHES "1")
 
-    SET(CMAKE_CXX_PARAMS      " --param large-function-growth=5000 --param inline-unit-growth=600 -finline-limit=2000 -fPIC ")
+    SET(CMAKE_CXX_PARAMS      " --param large-function-growth=5000 --param inline-unit-growth=600 -finline-limit=2000 -fPIC -std=c++11 ")
 
     SET(CMAKE_CXX_WARN_FLAGS  " -Wall -pedantic -Wno-long-long -Wno-inline -finline-functions ")
 
