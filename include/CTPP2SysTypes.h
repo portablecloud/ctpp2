@@ -39,9 +39,7 @@
 
 // C Includes
 #include <sys/types.h>
-#include <stdint.h>
-
-using namespace std;
+#include <cstdint>
 
 #if defined(__linux__) || defined(linux) || defined(CYGWIN) || defined(__CYGWIN__)
 
